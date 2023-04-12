@@ -1,8 +1,5 @@
 
 
-./server/node_modules
-./server/.env
-./server/package.json
-
-./client/node_modules
-./client/package.json
+/server/node_modules
+/server/.env
+/client/node_modules

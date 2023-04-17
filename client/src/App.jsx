@@ -1,32 +1,20 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import "./App.css";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/header";
+
+import AdminSideBar from "./components/sidebar/adminsidebar";
+import AdminDashboard from "./pages/admin/admindashboard";
+
 function App() {
-  const [department, setDepartment] = useState([]);
-
-  useEffect(() => {
-    loadData();
-  }, []);
-
-  const loadData = async () => {
-    try {
-      const { data } = await axios.get("department");
-      setDepartment(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   return (
-    <div className="App">
-      <div className="text-3xl font-bold font-Noto">
-        {department?.map((d) => (
-          <div className="font-Noto" key={d._id}>
-            <p>{d?.name_la}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Header />} />
+        <Route path="/test" element={<AdminSideBar />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

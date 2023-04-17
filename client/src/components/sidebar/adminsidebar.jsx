@@ -53,7 +53,7 @@ export default function AdminSideBar() {
         defaultSelectedKeys={["sub1"]}
         mode="inline"
         items={items}
-        className="font-Noto "
+        className="font-noto "
       />
     </Sider>
   );

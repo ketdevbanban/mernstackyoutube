@@ -2,7 +2,7 @@ import React from "react";
 import { SearchOutlined } from "@ant-design/icons";
 export default function Header() {
   return (
-    <div className="flex justify-between items-center bg-green-800 h-[70px] text-white font-Noto shadow-xl">
+    <div className="flex justify-between items-center bg-green-800 h-[70px] text-white font-Noto shadow-xl sticky top-0 z-50">
       <div className="text-3xl font-semibold text-gray-200">
         <p>ທີມງານສ້ອມແປງເຄື່ອງຈັກ</p>
       </div>

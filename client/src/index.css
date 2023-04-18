@@ -7,10 +7,7 @@
   src: url("./assets/font/NotoSerifLao-VariableFont_wdth,wght.ttf");
 }
 
-
 html,
 body {
   font-family: "noto";
-  margin: 0;
-  padding: 0;
 }

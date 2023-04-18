@@ -5,12 +5,14 @@ import Header from "./components/header";
 import AdminSideBar from "./components/sidebar/adminsidebar";
 import AdminDashboard from "./pages/admin/admindashboard";
 import Alluser from "./pages/admin/user/alluser";
+import Login from "./pages/auth/login";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
       <Routes>
+        <Route path="/" element={<Login />} />
         <Route path="/test" element={<AdminSideBar />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/alluser" element={<Alluser />} />
